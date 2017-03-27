@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+.content {
+    width: 100%;
+    //轮播图样式
+    .banner {
+        overflow: hidden;
+        position: relative;
+        .pic {
+            width: 100%;
+            font-size: 0;
+            display: flex;
+            flex-direction: row;
+            img {
+                width: 100%;
+                height: auto;
+                flex-shrink: 0;
+                transition: all 0.8s;
+            }
+        }
+        .icon {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            .bot {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                margin: 0 10px;
+                border-radius: 50%;
+                transition: all 0.8s;
+            }
+            .ac {
+                background: gold;
+            }
+        }
+    }
+    //推荐歌曲的样式
+    .demo1,.demo2 {
+        .title {
+            height: 35px;
+            color: #333;
+            font-size: (1.4rem/2);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            .left {
+                width: 100px;
+                height: auto;
+                h3 {
+                    background: url("../img/aei.png") no-repeat center left;
+                    background-size: 20px;
+                    padding-left: 25px;
+                    font-weight: normal;
+                    font-size:(1.6rem/2)
+                }
+            }
+            .right {
+                a {
+                    color: #666;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .songList{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .loadImg{
+            padding: 80px 0;
+            img{
+                vertical-align: middle;
+                animation: loadImgAnimate 2s linear infinite;
+            }
+        }
+        .song1{
+            width: (100%/3.1);
+            .pic{
+                width: 100%;
+                position: relative;
+                img{width: 100%;}
+                .positions{
+                    width: 100%;
+                    position: absolute;
+                    top:0;
+                    text-align: right; 
+                    font-size: (1.4rem/2);
+                    color: #fff; 
+                    padding: 5px 10px;
+                    background:rgba(0,0,0,0.5);
+                }
+            }
+            p{width: 100%; font-size:(1.2rem/2);}
+        
+        }
+        
+    }
+    
+    .demo2 {
+        .title {
+           
+            .left {
+               
+                h3 {
+                    background: url("../img/aee.png") no-repeat center left;
+                    background-size: 20px;
+                    padding-left: 25px;
+                    font-weight: normal;
+                }
+            }
+       
+        }
+    }
+      .mvList{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .mv{
+            width: (100%/2.05);
+            .pic{
+                width: 100%;
+                position: relative;
+                img{width: 100%;}
+                .positions{
+                    width: 100%;
+                    position: absolute;
+                    top:0;
+                    text-align: right; 
+                    font-size: (1.4rem/2);
+                    color: #fff; 
+                    padding: 5px 10px;
+                    background:rgba(0,0,0,0.5);
+                }
+            }
+            p{width: 100%; font-size:(1.2rem/2);}
+        
+        }
+        
+    }
+    
+}
+@keyframes loadImgAnimate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
